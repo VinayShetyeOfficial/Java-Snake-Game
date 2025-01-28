@@ -1,7 +1,13 @@
 import javax.swing.JFrame;
 
+/**
+ * GameFrame is the main window of the game, containing the GamePanel.
+ */
 public class GameFrame extends JFrame {
 
+  /**
+   * Constructs the game frame, setting up the main window properties.
+   */
   GameFrame() {
 
     // Create a new instance of GamePanel

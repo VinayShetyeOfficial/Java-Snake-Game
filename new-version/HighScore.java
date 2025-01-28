@@ -1,10 +1,18 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * HighScore manages the high scores for the game, allowing saving and
+ * retrieval.
+ */
 public class HighScore {
     private static final String FILE_PATH = "highscores.dat";
     private List<Score> highScores = new ArrayList<>();
 
+    /**
+     * Score represents a player's score, including their name and the date
+     * achieved.
+     */
     static class Score implements Serializable {
         String playerName;
         int score;
@@ -17,6 +25,11 @@ public class HighScore {
         }
     }
 
+    /**
+     * Saves a new score, maintaining a sorted list of top scores.
+     *
+     * @param score The score to be saved
+     */
     public void saveScore(Score score) {
         highScores.add(score);
         Collections.sort(highScores, (a, b) -> b.score - a.score);
@@ -26,6 +39,9 @@ public class HighScore {
         saveToFile();
     }
 
+    /**
+     * Saves the high scores to a file.
+     */
     private void saveToFile() {
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new FileOutputStream(FILE_PATH))) {
