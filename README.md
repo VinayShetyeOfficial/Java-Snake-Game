@@ -67,12 +67,24 @@ java SnakeGame
 
 ## 📁 Project Structure
 
+```
 snake-game-java
-├── GameFrame.java # Game window management
-├── GamePanel.java # Main game logic
-├── SnakeGame.java # Game initialization
-├── SoundManager.java # Audio management
-└── HighScore.java # High score tracking
+├── new-version
+│  ├── asset
+│  │  ├── food.wav
+│  │  └── gameover.wav
+│  ├── GameFrame.java
+│  ├── GamePanel.java
+│  ├── HighScore.java
+│  ├── SnakeGame.java
+│  └── SoundManager.java
+├── old-version
+│  ├── GameFrame.java
+│  ├── GamePanel.java
+│  └── SnakeGame.java
+├── LICENSE
+└── README.md
+```
 
 ## 🛠️ Built With
 
